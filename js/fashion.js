@@ -1,91 +1,117 @@
-var Quiz = function(){
-  var self = this;
-  this.init = function(){
-    self._bindEvents();
-  }
+(function() {
+  function buildQuiz() {
+    // we'll need a place to store the HTML output
+    const output = [];
 
-  this.correctAnswers = [
-    { question: 1, answer: 'c' },
-    { question: 2, answer: 'c' },
-    { question: 3, answer: 'a' },
-    { question: 4, answer: 'a' },
+    // for each question...
+    myQuestions.forEach((currentQuestion, questionNumber) => {
+      // we'll want to store the list of answer choices
+      const answers = [];
 
-  ]
-
-  this._pickAnswer = function($answer, $answers){
-    $answers.find('.quiz-answer').removeClass('active');
-    $answer.addClass('active');
-  }
-  this._calcResult = function(){
-    var numberOfCorrectAnswers = 0;
-    $('ul[data-quiz-question]').each(function(i){
-      var $this = $(this),
-          chosenAnswer = $this.find('.quiz-answer.active').data('quiz-answer'),
-          correctAnswer;
-
-      for ( var j = 0; j < self.correctAnswers.length; j++ ) {
-        var a = self.correctAnswers[j];
-        if ( a.question == $this.data('quiz-question') ) {
-          correctAnswer = a.answer;
-        }
+      // and for each available answer...
+      for (letter in currentQuestion.answers) {
+        // ...add an HTML radio button
+        answers.push(
+            `<label>
+            <input type="radio" name="question${questionNumber}" value="${letter}">
+            ${letter} :
+            ${currentQuestion.answers[letter]}
+          </label>`
+        );
       }
 
-      if ( chosenAnswer == correctAnswer ) {
-        numberOfCorrectAnswers++;
+      // add this question and its answers to the output
+      output.push(
+          `<label class="container"><div class="question"> <h2>${currentQuestion.question}</h2> </div></label>
+        <div class="answers"> ${answers.join("")} </div>`
+      );
+    });
 
-        // highlight this as correct answer
-        $this.find('.quiz-answer.active').addClass('correct');
-      }
-      else {
-        $this.find('.quiz-answer[data-quiz-answer="'+correctAnswer+'"]').addClass('correct');
-        $this.find('.quiz-answer.active').addClass('incorrect');
+    // finally combine our output list into one string of HTML and put it on the page
+    quizContainer.innerHTML = output.join("");
+  }
+
+  function showResults() {
+    // gather answer containers from our quiz
+    const answerContainers = quizContainer.querySelectorAll(".answers");
+
+    // keep track of user's answers
+    let numCorrect = 0;
+
+    // for each question...
+    myQuestions.forEach((currentQuestion, questionNumber) => {
+      // find selected answer
+      const answerContainer = answerContainers[questionNumber];
+      const selector = `input[name=question${questionNumber}]:checked`;
+      const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+
+      // if answer is correct
+      if (userAnswer === currentQuestion.correctAnswer) {
+        // add to the number of correct answers
+        numCorrect++;
+
+        // color the answers green
+        answerContainers[questionNumber].style.color = "green";
+      } else {
+        // if answer is wrong or blank
+        // color the answers red
+        answerContainers[questionNumber].style.color = "red";
       }
     });
-    if ( numberOfCorrectAnswers < 3 ) {
-      return {code: 'bad', text: 'Poor spelling skills'};
-    }
-    else if ( numberOfCorrectAnswers == 3 || numberOfCorrectAnswers == 4 ) {
-      return {code: 'mid', text: 'Moderate spelling skills'};
-    }
-    else if ( numberOfCorrectAnswers > 4 ) {
-      return {code: 'good', text: 'Good spelling skills'};
-    }
-  }
-  this._isComplete = function(){
-    var answersComplete = 0;
-    $('ul[data-quiz-question]').each(function(){
-      if ( $(this).find('.quiz-answer.active').length ) {
-        answersComplete++;
-      }
-    });
-    if ( answersComplete >= 6 ) {
-      return true;
-    }
-    else {
-      return false;
-    }
-  }
-  this._showResult = function(result){
-    $('.quiz-result').addClass(result.code).html(result.text);
-  }
-  this._bindEvents = function(){
-    $('.quiz-answer').on('click', function(){
-      var $this = $(this),
-          $answers = $this.closest('ul[data-quiz-question]');
-      self._pickAnswer($this, $answers);
-      if ( self._isComplete() ) {
 
-        // scroll to answer section
-        $('html, body').animate({
-          scrollTop: $('.quiz-result').offset().top
-        });
-
-        self._showResult( self._calcResult() );
-        $('.quiz-answer').off('click');
-
-      }
-    });
+    // show number of correct answers out of total
+    resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
   }
-}
-var quiz = new Quiz();
-quiz.init();
+
+  const quizContainer = document.getElementById("quiz");
+  const resultsContainer = document.getElementById("results");
+  const submitButton = document.getElementById("submit");
+  const myQuestions = [
+    {
+      question: "Q1. In what country do people wear Kimonos?",
+      answers: {
+        a: "China",
+        b: "Vietnam",
+        c: "Japan",
+        d: "Korea"
+      },
+      correctAnswer: "c"
+    },
+    {
+      question: "Q2. Where do people wear the Conical hats?",
+      answers: {
+        a: "Laos",
+        b: "Indonesia",
+        c: "Vietnam",
+        d: "Cambodia"
+      },
+      correctAnswer: "c"
+    },
+    {
+      question: "Q3. In what country do people wear the Hanboks?",
+      answers: {
+        a: "Korea",
+        b: "China",
+        c: "Germany",
+        d: "Vietnam"
+      },
+      correctAnswer: "a"
+    },
+    {
+      question: "Q4. Are Saris worn in ______ in weddings?",
+      answers: {
+        a: "India, yes",
+        b: "India, no",
+        c: "South Africa, yes",
+        d: "South Africa, no"
+      },
+      correctAnswer: "a"
+    }
+  ];
+
+  // display quiz right away
+  buildQuiz();
+
+  // on submit, show results
+  submitButton.addEventListener("click", showResults);
+})();
