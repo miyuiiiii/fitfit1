@@ -1,0 +1,129 @@
+h1{
+    color : white  ;
+}
+
+#header.h1 {
+    float:left;
+    font-family: Courier, sans-serif;
+    text-align: center;
+}
+
+
+#header {
+    width: 100%;
+
+}
+
+h2{
+
+    color: white;
+    text-align: right;
+}
+a { text-decoration: none; color: black; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:focus { text-decoration: none; }
+a:hover {
+    background-color: #AED6F1;
+}
+a {font-size: 20px;
+    margin-top:-30px;
+    margin-right: 20px;
+}
+a:active { text-decoration: none; }
+
+
+#header{
+    background-color: #FEC8D8
+;
+    border: 2px solid black;
+    padding: 5px;
+    margin: 5px;
+    text-align:left;
+}
+#header1{
+    background-color:  #D6EAF8
+;
+    height:200;
+    width:100;
+    float:left;
+    border: 1px solid black;
+    padding: 0.5px;
+    margin-left:5px;
+    text-align:left;
+
+
+}
+#header2{
+    background-color: #F5B7B1          ;
+    height:200;
+    width:100;
+    float:left;
+    border: 1px solid black;
+    padding: 0.5px;
+    margin-left:5px;
+    text-align:left;
+
+}
+#header3{
+    background-color: #F9E79F       ;
+    height:200;
+    width:100;
+    float:left;
+    border: 1px solid black;
+    padding: 0.5px;
+    margin-left:5px;
+    text-align:left;
+
+}
+#header4{
+    background-color: #F5CBA7   ;
+    height:200;
+    width:100;
+    float:left;
+    border: 1px solid black;
+    padding: 0.5px;
+    margin-left:5px;
+    text-align:center;
+
+}
+#content{
+    background-color: white;
+    height:200px;
+    width:1220px;
+    float:none;
+    border:1px solid black;
+    padding:5px;
+    margin:5px;
+    text-align: center;
+}
+#content2{
+    background-color: white;
+    height:200px;
+    width:1220px;
+    float:none;
+    border:1px solid black;
+    padding:5px;
+    margin:5px;
+    text-align: center;
+}
+#content3{
+    background-color: white;
+    height:200px;
+    width:1220px;
+    float:none;
+    border:1px solid black;
+    padding:5px;
+    margin:5px;
+    text-align: center;
+}
+#content4{
+    background-color: white;
+    height:200px;
+    width:1220px;
+    float:none;
+    border:1px solid black;
+    padding:5px;
+    margin:5px;
+    text-align: center;
+}
