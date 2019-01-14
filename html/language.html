@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Self Introduction</title>
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <script src="../js/language.js"></script>
+</head>
+
+<body>
+
+<div id="header"> <h1> Guess the meaning of these slangs! </div>
+
+<div class="quiz">
+
+    <h2>Q1: What does 'Che schifo!' mean?</h2>
+    <ul data-quiz-question="1">
+        <label class="container">
+            <div class="quiz-answer">a. How beautiful! </div>
+            <input type="radio" name="question1" value = "A" checked="checked">
+            <span class="checkmark" data-quiz-answer="a"></span>
+        </label>
+        <label class="container">
+            <div class="quiz-answer">b. How amazing!</div>
+            <input type="radio" name="question1" value = "B" checked="checked">
+            <span class="checkmark" data-quiz-answer="b"></span>
+        </label>
+        <label class="container">
+            <div class="quiz-answer">c. How disgusting!</div>
+            <input type="radio" name="question1" value = "C" checked="checked">
+            <span class="checkmark" data-quiz-answer="c"></span>
+        </label>
+
+        <label class="container">
+            <div class="quiz-answer">d. How spectacular!</div>
+            <input type="radio" name="question1" value = "D" checked="checked">
+            <span class="checkmark" data-quiz-answer="d"></span>
+        </label>
+    </ul>
+
+
+    <h2 class="quiz-question">Q2: What does 'Ick liebe Dir' mean?</h2>
+    <ul data-quiz-question="2">
+        <label class="container">
+            <div class="quiz-answer">a. I am hungry. </div>
+            <input type="radio" name="question2" value = "A" checked="checked">
+            <span class="checkmark" data-quiz-answer="a"></span>
+        </label>
+        <label class="container">
+            <div class="quiz-answer">b. I love you. </div>
+            <input type="radio" name="question2" value = "B" checked="checked">
+            <span class="checkmark" data-quiz-answer="b"></span>
+        </label>
+        <label class="container">
+            <div class="quiz-answer">c. I don't like you.</div>
+            <input type="radio" name="question2" value = "C" checked="checked">
+            <span class="checkmark" data-quiz-answer="c"></span>
+        </label>
+        <label class="container">
+            <div class="quiz-answer">d. I am mad at you.</div>
+            <input type="radio" name="question2" value = "D" checked="checked">
+            <span class="checkmark" data-quiz-answer="d"></span>
+        </label>
+    </ul>
+
+    <h2 class="quiz-question">Q3:What does 'Majide' mean?</h2>
+    <ul data-quiz-question="3">
+        <label class="container">
+            <div class="quiz-answer">a. Omg really? </div>
+            <input type="radio" name="question3" value = "A" checked="checked">
+            <span class="checkmark" data-quiz-answer="a"></span>
+        </label>
+        <label class="container">
+            <div class="quiz-answer">b. How are you today?</div>
+            <input type="radio" name="question3" value = "B" checked="checked">
+            <span class="checkmark" data-quiz-answer="b"></span>
+        </label>
+        <label class="container">
+            <div class="quiz-answer">c. Oh crap</div>
+            <input type="radio" name="question3" value = "C" checked="checked">
+            <span class="checkmark" data-quiz-answer="c"></span>
+        </label>
+        <label class="container">
+            <div class="quiz-answer">d. I don't like this</div>
+            <input type="radio" name="question3" value = "D" checked="checked">
+            <span class="checkmark" data-quiz-answer="d"></span>
+        </label>
+    </ul>
+
+    <h2 class="quiz-question">Q4:What does 'Schez-pas' mean??</h2>
+    <ul data-quiz-question="4">
+        <label class="container">
+            <div class="quiz-answer">a. I want a drink. </div>
+            <input type="radio" name="question4" value = "A" checked="checked">
+            <span class="checkmark" data-quiz-answer="a"></span>
+        </label>
+        <label class="container">
+            <div class="quiz-answer">b. I am leaving.</div>
+            <input type="radio" name="question4" value = "B" checked="checked">
+            <span class="checkmark" data-quiz-answer="b"></span>
+        </label>
+        <label class="container">
+            <div class="quiz-answer">c. I am happy.</div>
+            <input type="radio" name="question4" value = "C" checked="checked">
+            <span class="checkmark" data-quiz-answer="c"></span>
+        </label>
+        <label class="container">
+            <div class="quiz-answer">d. I don't know.</div>
+            <input type="radio" name="question4" value = "D" checked="checked">
+            <span class="checkmark" data-quiz-answer="d"></span>
+        </label>
+    </ul>
+
+    <button class="submit" onclick="SubmitQuiz()">Submit Quiz</button>
+    <span id="myresults" class="my-results">My results will appear here</span>
+
+
+    <button id="GoToHomepage" class="float-left submit-button" onClick="GoToHomepage()" >Go to Home</button>
+    <button id="GoToNextPage" class="float-left submit-button" onClick="GoToNextPage()" >Go to next quiz</button>
+
+    <div class="quiz-result"></div>
+
+</div>

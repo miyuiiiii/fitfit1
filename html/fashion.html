@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Self Introduction</title>
+    <link rel="stylesheet" type="text/css" href="buzzfeedstyle.css">
+  </head>
+
+  <body>
+
+    <div id="header"> <h1> Guess these fashion quizzes and become a fashionista! <img style="display: inline;" src="file:///Users/sakiisetani/Desktop/black-dress-clipart-black-skirt-860188-4362032.png" height="35" width="35" alt="logo" /></div>
+
+        <div class="quiz">
+
+          <h2 class="quiz-question">Q1: In what country do people wear Kimonos?</h2>
+          <div id="photo"> <img src="file:///Users/sakiisetani/Desktop/20174320413.jpg"
+          alt="Kimono" class="center" height="300" width="500"> </div>
+
+          <ul data-quiz-question="1">
+            <label class="container">
+              <div class="quiz-answer">a. China </div>
+              <input type="radio" name="radio1" checked="checked">
+              <span class="checkmark" data-quiz-answer="a"></span>
+            </label>
+            <label class="container">
+              <div class="quiz-answer">b. Vietnam</div>
+              <input type="radio" name="radio1" checked="checked">
+              <span class="checkmark" data-quiz-answer="b"></span>
+            </label>
+            <label class="container">
+              <div class="quiz-answer">c. Japan</div>
+              <input type="radio" name="radio1" checked="checked">
+              <span class="checkmark" data-quiz-answer="c"></span>
+            </label>
+            <label class="container">
+              <div class="quiz-answer">d. Korea</div>
+              <input type="radio" name="radio1" checked="checked">
+              <span class="checkmark" data-quiz-answer="d"></span>
+            </label>
+          </ul>
+
+          <h2 class="quiz-question">Q2: Where do people wear the Conical hats?</h2>
+          <div id="photo"> <img src="file:///Users/sakiisetani/Desktop/d9e74eef42fdd8d19bb2e8065b0ebcc1.jpg"
+          alt="Qipaos" class="center" height="300" width="500"> </div>
+          <ul data-quiz-question="2">
+            <label class="container">
+              <div class="quiz-answer">a. Laos </div>
+              <input type="radio" name="radio2" checked="checked">
+              <span class="checkmark" data-quiz-answer="a"></span>
+            </label>
+            <label class="container">
+              <div class="quiz-answer">b. Indonesia </div>
+              <input type="radio" name="radio2" checked="checked">
+              <span class="checkmark" data-quiz-answer="b"></span>
+            </label>
+            <label class="container">
+              <div class="quiz-answer">c. Vietnam</div>
+              <input type="radio" name="radio2" checked="checked">
+              <span class="checkmark" data-quiz-answer="c"></span>
+            </label>
+            <label class="container">
+              <div class="quiz-answer">d. Cambodia</div>
+              <input type="radio" name="radio2" checked="checked">
+              <span class="checkmark" data-quiz-answer="d"></span>
+            </label>
+          </ul>
+
+          <h2 class="quiz-question">Q3:In what country do people wear the Hanboks?</h2>
+          <div id="photo"> <img src="file:///Users/sakiisetani/Desktop/6176208261_b3a6b51bcf_z.jpg"
+          alt="Hanbok" class="center" height="300" width="500"> </div>
+          <ul data-quiz-question="3">
+            <label class="container">
+              <div class="quiz-answer">a. Korea </div>
+              <input type="radio" name="radio3" checked="checked">
+              <span class="checkmark" data-quiz-answer="a"></span>
+            </label>
+            <label class="container">
+              <div class="quiz-answer">b. China</div>
+              <input type="radio" name="radio3" checked="checked">
+              <span class="checkmark" data-quiz-answer="b"></span>
+            </label>
+            <label class="container">
+              <div class="quiz-answer">c. Germany</div>
+              <input type="radio" name="radio3" checked="checked">
+              <span class="checkmark" data-quiz-answer="c"></span>
+            </label>
+            <label class="container">
+              <div class="quiz-answer">d. Vietnam</div>
+              <input type="radio" name="radio3" checked="checked">
+              <span class="checkmark" data-quiz-answer="d"></span>
+            </label>
+          </ul>
+
+          <h2 class="quiz-question">Q4: Are Saris worn in ______ in weddings?</h2>
+          <div id="photo"> <img src="file:///Users/sakiisetani/Desktop/maxresdefault-1.jpg"
+          alt="Saris" class="center" height="300" width="500"> </div>
+
+          <ul data-quiz-question="4">
+            <label class="container">
+              <div class="quiz-answer">a. India, Yes. </div>
+              <input type="radio" name="radio4" checked="checked">
+              <span class="checkmark" data-quiz-answer="a"></span>
+            </label>
+            <label class="container">
+              <div class="quiz-answer">b. India, No.</div>
+              <input type="radio" name="radio4" checked="checked">
+              <span class="checkmark" data-quiz-answer="b"></span>
+            </label>
+            <label class="container">
+              <div class="quiz-answer">c. South Africa, Yes.</div>
+              <input type="radio" name="radio4" checked="checked">
+              <span class="checkmark" data-quiz-answer="c"></span>
+            </label>
+            <label class="container">
+              <div class="quiz-answer">d. South Africa, No.</div>
+              <input type="radio" name="radio4" checked="checked">
+              <span class="checkmark" data-quiz-answer="d"></span>
+            </label>
+          </ul>
+
+          <button class="submit" onclick="SubmitQuiz()">Submit Quiz</button>
+          <span id="myresults" class="my-results">Results will appear here</span>
+
+          <p>
+            <button id="GoToHomepage" class="float-left submit-button" onClick="GoToHomepage()" >Go to Home</button>
+            <button id="GoToNextPage" class="float-left submit-button" onClick="GoToNextPage()" >Go to next quiz</button>
+          </p>
+
+          <div class="quiz-result"></div>
+
+          <script src="fashion.js"></script>
+
+</div>
+ </body>
+
+ </html>

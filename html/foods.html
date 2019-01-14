@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Self Introduction</title>
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+  </head>
+
+  <body>
+
+    <div id="header"> <h1> Guess these food dishes from around the world! </div>
+
+        <div class="quiz">
+
+          <h2 class="quiz-question">Q1: Which would you say is not a national food of Korea?</h2>
+          <div class="photo"> <img src="../pictures/KoreanFood.jpg" alt="koreafood" class="center" height="250" width="450"> </div>
+
+          <ul data-quiz-question="1">
+            <label class="container">
+              <div class="quiz-answer">a. Kimchi </div>
+              <input type="radio" name="radio1" checked="checked">
+              <span class="checkmark" data-quiz-answer="a"></span>
+            </label>
+            <label class="container">
+              <div class="quiz-answer">b. Paella</div>
+              <input type="radio" name="radio1" checked="checked">
+              <span class="checkmark" data-quiz-answer="b"></span>
+            </label>
+            <label class="container">
+              <div class="quiz-answer">c. Bulgogi</div>
+              <input type="radio" name="radio1" checked="checked">
+              <span class="checkmark" data-quiz-answer="c"></span>
+            </label>
+            <label class="container">
+              <div class="quiz-answer">d. Bibimbap</div>
+              <input type="radio" name="radio1" checked="checked">
+              <span class="checkmark" data-quiz-answer="d"></span>
+            </label>
+          </ul>
+
+          <h2 class="quiz-question">Q2:Which one of the below is not a French dish? </h2>
+          <div class="photo"> <img src="../pictures/French_Cuisine.jpg" alt="france" class="center" height="250" width="450"> </div>
+
+          <ul data-quiz-question="2">
+            <label class="container">
+              <div class="quiz-answer">a. Chicken Marengo </div>
+              <input type="radio" name="radio2" checked="checked">
+              <span class="checkmark" data-quiz-answer="a"></span>
+            </label>
+            <label class="container">
+              <div class="quiz-answer">b. Boule</div>
+              <input type="radio" name="radio2" checked="checked">
+              <span class="checkmark" data-quiz-answer="b"></span>
+            </label>
+            <label class="container">
+              <div class="quiz-answer">c. Hủ tiếu</div>
+              <input type="radio" name="radio2" checked="checked">
+              <span class="checkmark" data-quiz-answer="c"></span>
+            </label>
+            <label class="container">
+              <div class="quiz-answer">d. Bûche de Noël</div>
+              <input type="radio" name="radio2" checked="checked">
+              <span class="checkmark" data-quiz-answer="d"></span>
+            </label>
+          </ul>
+
+          <h2 class="quiz-question">Q3:Which one of the foods below belong to Vietnamese Traditional Dish?</h2>
+          <div class="photo"> <img src="../pictures/Vietnam.jpg" alt="Vietnam" class="center" height="250" width="450"> </div>
+
+          <ul data-quiz-question="3">
+            <label class="container">
+              <div class="quiz-answer">a. Popiah </div>
+            <input type="radio" name="radio3" checked="checked">
+              <span class="checkmark" data-quiz-answer="a"></span>
+            </label>
+            <label class="container">
+              <div class="quiz-answer">b. Sel'edka pod shuboy</div>
+              <input type="radio" name="radio3" checked="checked">
+              <span class="checkmark" data-quiz-answer="b"></span>
+            </label>
+            <label class="container">
+              <div class="quiz-answer">c. Nasi Lemak</div>
+              <input type="radio" name="radio3" checked="checked">
+              <span class="checkmark" data-quiz-answer="c"></span>
+            </label>
+            <label class="container">
+              <div class="quiz-answer">d. Tau Suan</div>
+              <input type="radio" name="radio3" checked="checked">
+              <span class="checkmark" data-quiz-answer="d"></span>
+            </label>
+          </ul>
+
+          <h2 class="quiz-question">Q4:Which country is Paella from? </h2>
+          <div class="photo"> <img src="../pictures/Paella.jpg" alt="Paella" class="center" height="250" width="450"> </div>
+
+          <ul data-quiz-question="4">
+            <label class="container">
+              <div class="quiz-answer">a. Brazil </div>
+              <input type="radio" name="radio4" checked="checked">
+              <span class="checkmark" data-quiz-answer="a"></span>
+            </label>
+            <label class="container">
+              <div class="quiz-answer">b. Spain</div>
+              <input type="radio" name="radio4" checked="checked">
+              <span class="checkmark" data-quiz-answer="b"></span>
+            </label>
+            <label class="container">
+              <div class="quiz-answer">c. The Democratic Republic of the Congo</div>
+              <input type="radio" name="radio4" checked="checked">
+              <span class="checkmark" data-quiz-answer="c"></span>
+            </label>
+            <label class="container">
+              <div class="quiz-answer">d. Laos</div>
+              <input type="radio" name="radio4" checked="checked">
+              <span class="checkmark" data-quiz-answer="d"></span>
+            </label>
+          </ul>
+
+          <button class="submit" onclick="SubmitQuiz()">Submit Quiz</button>
+          <span id="myresults" class="my-results">Results will appear here</span>
+
+          <p>
+            <button id="GoToHomepage" class="float-left submit-button" onClick="GoToHomepage()" >Go to Home</button>
+            <button id="GoToNextPage" class="float-left submit-button" onClick="GoToNextPage()" >Go to next quiz</button>
+          </p>
+
+          <div class="quiz-result"></div>
+
+          <script src="../js/foods.js"></script>
+
+</div>
+ </body>
+
+ </html>
