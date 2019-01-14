@@ -1,136 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="eng">
 
   <head>
     <meta charset="utf-8">
-    <title>Self Introduction</title>
-    <link rel="stylesheet" type="text/css" href="buzzfeedstyle.css">
-    <script src="festivals.js"></script>
+    <title>Festivals!!</title>
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+
   </head>
 
   <body>
-
-    <div id="header"> <h1> Where are these festivals celebrated? <img style="display: inline;" src="file:///Users/sakiisetani/Desktop/party_engineer_900299.png" height="35" width="35" alt="logo" /></div>
-
-        <div class="quiz">
-
-          <h2 class="quiz-question">Q1: In which country is the Harbin Ice Festival celebrated?</h2>
-          <div id="photo"> <img src="file:///Users/sakiisetani/Desktop/Harbin-Ice-Festival.jpg"
-          alt="Harbin Ice Festival" height="300" width="400"> </div>
-        </div>
-          <ul data-quiz-question="1">
-            <label class="container">
-              <div class="quiz-answer">a. Mongolia </div>
-              <input type="radio" name="question1"  value= "a" checked="checked">
-              <span class="checkmark" data-quiz-answer="a"></span>
-            </label>
-            <label class="container">
-              <div class="quiz-answer">b. Switzerland</div>
-              <input type="radio" name="question1" value= "b" checked="checked">
-              <span class="checkmark" data-quiz-answer="b"></span>
-            </label>
-            <label class="container">
-              <div class="quiz-answer">c. China</div>
-              <input type="radio" name="question1" value= "c" checked="checked">
-              <span class="checkmark" data-quiz-answer="c"></span>
-            </label>
-            <label class="container">
-              <div class="quiz-answer">d. Norway</div>
-              <input type="radio" name="question1" value = "d" checked="checked">
-              <span class="checkmark" data-quiz-answer="d"></span>
-            </label>
-
-          </ul>
-
-          <h2 class="quiz-question">Q2: What is the meaning of "Holi" a festival celebrated in India?</h2>
-          <div id="photo"> <img src="file:///Users/sakiisetani/Desktop/Festivals-of-India.jpg"
-          alt="Holi" height="300" width="400"> </div>
-
-          <ul data-quiz-question="2">
-            <label class="container">
-              <div class="quiz-answer">a. Festival of Colours</div>
-              <input type="radio" name="question2" checked="checked">
-              <span class="checkmark" data-quiz-answer="a"></span>
-            </label>
-            <label class="container">
-              <div class="quiz-answer">b. Festival of Foods</div>
-              <input type="radio" name="question2" checked="checked">
-              <span class="checkmark" data-quiz-answer="b"></span>
-            </label>
-            <label class="container">
-              <div class="quiz-answer">c. Festival of the Arts</div>
-              <input type="radio" name="question2" checked="checked">
-              <span class="checkmark" data-quiz-answer="c"></span>
-            </label>
-            <label class="container">
-              <div class="quiz-answer">d. Festival of Water</div>
-              <input type="radio" name="question2" checked="checked">
-              <span class="checkmark" data-quiz-answer="d"></span>
-            </label>
-
-          </ul>
-
-          <h2 class="quiz-question">Q3:Where is the La Tomatina celebrated at? </h2>
-          <div id="photo"> <img src="file:///Users/sakiisetani/Desktop/pro.imgcdn2.jpg"
-          alt="Tomatina" height="300" width="400"> </div>
-
-          <ul data-quiz-question="3">
-            <label class="container">
-              <div class="quiz-answer">a. Italy</div>
-              <input type="radio" name="question3" checked="checked">
-              <span class="checkmark" data-quiz-answer="a"></span>
-            </label>
-            <label class="container">
-              <div class="quiz-answer">b. Romania</div>
-              <input type="radio" name="question3" checked="checked">
-              <span class="checkmark" data-quiz-answer="b"></span>
-            </label>
-            <label class="container">
-              <div class="quiz-answer">c. Spain</div>
-              <input type="radio" name="question3" checked="checked">
-              <span class="checkmark" data-quiz-answer="c"></span>
-            </label>
-            <label class="container">
-              <div class="quiz-answer">d. Israel</div>
-              <input type="radio" name="question3" checked="checked">
-              <span class="checkmark" data-quiz-answer="d"></span>
-            </label>
-
-          <h2 class="quiz-question">Q4:Mardi Gras is a carnival from New Orleans. What is another way to call this carnival? </h2>
-          <div id="photo"> <img src="file:///Users/sakiisetani/Desktop/5751e19104caf.image.jpg"
-          alt="Mardi Gras" class="center" height="300" width="400"> </div>
-
-          <ul data-quiz-question="4">
-            <label class="container">
-              <div class="quiz-answer">a. Mad Monday</div>
-              <input type="radio" name="question4" checked="checked">
-              <span class="checkmark" data-quiz-answer="a"></span>
-            </label>
-            <label class="container">
-              <div class="quiz-answer">b. Mad Friday</div>
-              <input type="radio" name="question4" checked="checked">
-              <span class="checkmark" data-quiz-answer="b"></span>
-            </label>
-            <label class="container">
-              <div class="quiz-answer">c. Fat Tuesday</div>
-              <input type="radio" name="question4" checked="checked">
-              <span class="checkmark" data-quiz-answer="c"></span>
-            </label>
-            <label class="container">
-              <div class="quiz-answer">d. Fat Wednesday</div>
-              <input type="radio" name="question4" checked="checked">
-              <span class="checkmark" data-quiz-answer="d"></span>
-            </label>
-          </ul>
-
-          <button class="submit" onclick="SubmitQuiz()">Submit Quiz</button>
-          <span id="myresults" class="my-results">Results will appear here</span>
-
-          <p>
-            <button id="GoToHomepage" class="float-left submit-button" onClick="GoToHomepage()" >Go to Home</button>
-            <button id="GoToNextPage" class="float-left submit-button" onClick="GoToNextPage()" >Go to next quiz</button>
-          </p>
-
+    <div id="header"> <h1> Where are these festivals celebrated? </h1> </div>
+    <div id="quiz"></div>
+    <button id="submit">Submit Quiz</button>
+    <div id="results"></div>
+   <p>
+     <a href="../index.html"><button id="GoToHomepage" class="float-left submit-button">Go to Home</button></a>
+     <a href="foods.html"><button id="GoToNextPage" class="float-left submit-button">Go to next quiz</button></a>
+   </p>
+    <script src="../js/festivals.js"></script>
 </div>
  </body>
 
